@@ -1,0 +1,169 @@
+﻿@model Project_flim.Areas.Admin.Models.Framework.ListDV
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>Chi tiết diễn viên @ViewBag.id</title>
+    <link rel="stylesheet" href="~/Assets/Client/css/chitietdienvien.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <div class="top">
+            <div class="left">
+                <a href="#" title="DTphim.org" style="text-decoration: none;"><h1>🎬DTphim.org</h1></a>
+            </div>
+            <div class="right">
+                <div class="input-box">
+                    <input type="text" title="Tìm kiếm" autocomplete="off" placeholder="Nhập tên phim, diễn viên ...">
+                </div>
+                <div class="search-item">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul class="root">
+                <li><a href="/Home/Index" title="Trang chủ" class="active">Trang chủ</a></li>
+                <li>
+                    <a href="#" title="Thể loại">Thể loại</a>
+                    <ul class="submenu">
+                        <li><a href="">Phim Hành Động</a></li>
+                        <li><a href="">Phim Tình Cảm</a></li>
+                        <li><a href="">Phim Viễn Tưởng</a></li>
+                        <li><a href="">Phim Hài Hước</a></li>
+                        <li><a href="">Phim Cổ Trang</a></li>
+                        <li><a href="">Phim Anime</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Quốc gia">Quốc gia</a>
+                    <ul class="submenu">
+                        <li><a href="">Việt Nam</a></li>
+                        <li><a href="">Mỹ</a></li>
+                        <li><a href="">Anh</a></li>
+                        <li><a href="">Trung Quốc</a></li>
+                        <li><a href="">Hàn Quốc</a></li>
+                        <li><a href="">Ấn Độ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Phim lẻ">Phim lẻ</a>
+                    <ul class="submenu">
+                        <li><a href="">Năm 2019</a></li>
+                        <li><a href="">Năm 2020</a></li>
+                        <li><a href="">Năm 2021</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Phim bộ">Phim bộ</a>
+                    <ul class="submenu">
+                        <li><a href="">Năm 2019</a></li>
+                        <li><a href="">Năm 2020</a></li>
+                        <li><a href="">Năm 2021</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="Trailer">Trailer</a></li>
+                <li><a href="" title="BXH">Top 50</a></li>
+                <li>
+                    <a href="#" title="Phim chiếu rạp">Phim chiếu rạp</a>
+                    <ul class="submenu">
+                        <li><a href="">Năm 2019</a></li>
+                        <li><a href="">Năm 2020</a></li>
+                        <li><a href="">Năm 2021</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Home/dangnhap" target="_self" title="Đăng nhập">Đăng nhập</a></li>
+                <li><a href="/Home/dangky" target="_self" title="Đăng ký">Đăng ký</a></li>
+                <li><a href="#" title="Về chúng tôi">Về chúng tôi</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container1">
+            <div class="poster">
+                <div class="left">
+                    <img src="~/Assets/FileUpload/DienVien/@Html.DisplayFor(x => x.ImageDV)" style="width: 300px; height: 315px; object-fit: cover;">
+                </div>
+                <div class="right">
+                    <div class="name">
+                        <a style="text-transform: uppercase; line-height: 50px; padding-left: 10px; ">@Html.DisplayFor(x => x.NameDV)</a><br>
+                       
+                    </div>
+                    <div class="information">
+                        <h5>Ngày sinh:@Html.DisplayFor(x => x.Date_of_birth)</h5>
+                        <h5>Nghề nghiệp: @Html.DisplayFor(x => x.Job)</h5>
+
+                        <h5>Chiều cao:@Html.DisplayFor(x => x.Height)</h5>
+                        <h5>Lượt xem:@Html.DisplayFor(x => x.View)</h5>
+                    </div>
+                    <a href="#" title="XEM PHIM CỦA TONNY JAA">
+                        <div class="nomi">
+                            <a href="#lq" title="XEM PHIM CỦA TONNY JAA" id="name" style="text-transform:uppercase;">XEM PHIM CỦA @Html.DisplayFor(x => x.NameDV)</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="historry">
+                <h2 style="color: yellow; font-family: 'Courier New', Courier, monospace;">TIỂU SỬ</h2>
+                <p style="color: white;">@Html.DisplayFor(x => x.Story)</p>
+            </div>
+        </div>
+    </div>
+    <div class="container1" style="background-color: #1d1d1d;height:540px">
+        <div class="title">
+            <h1 id="lq">MỘT SỐ PHIM ĐÃ THAM GIA</h1>
+        </div><br>
+        <div class="img">
+            <div class="add1">
+                <div class="top">
+                    <a href="#"><img src="~/Assets/FileUpload/@Html.DisplayFor(x => x.Related_movies)" style="width: 300px; height: 350px; object-fit: cover;"></a>
+                </div>
+                <div class="btn">
+                    <a href="/XemPhim/XemPhim/@Html.DisplayFor(x => x.PhimID)" style="text-transform:uppercase;">@Html.DisplayFor(x => x.NamePhim)</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="ket">
+        <div class="mt">
+            <b style="height: 130px;font-family: 'Times New Roman', Times, serif; font-size: 30px; padding-left:60px;">🎬DTphim.org</b><br>
+            <span style="padding-left:30px">Xem phim nhanh online chất lượng cao </span>
+
+        </div>
+        <div class="hi">
+            <b style="font-size: 20px;">Trang chủ </b><br><br>
+            <ul>
+                <li><a href="#" title="Phim lẻ mới">Phim lẻ mới</a> </li>
+                <li><a href="#" title="Phim bộ mới">Phim bộ mới</a> </li>
+                <li><a href="#" title="Phim chiếu rạp">Phim chiếu rạp</a> </li>
+                <li><a href="#" title="Phim kinh điển">Phim kinh điển</a> </li>
+                <li><a href="#" title="Phim sắp chiếu">Phim sắp chiếu</a> </li>
+            </ul>
+        </div>
+        <div class="ba">
+            <b style="font-size: 20px;">Phim Lẻ</b><br><br>
+            <ul>
+                <li><a href="#" title="Phim hành động">Phim hành động</a> </li>
+                <li><a href="#" title="Phim kiếm hiệp">Phim kiếm hiệp</a> </li>
+                <li><a href="#" title="Phim kinh dị">Phim kinh dị</a> </li>
+                <li><a href="#" title="Phim viễn tưởng">Phim viễn tưởng</a> </li>
+                <li><a href="#" title="Phim hoạt hình">Phim hoạt hình</a> </li>
+            </ul>
+        </div>
+        <div class="bn">
+            <b style="font-size: 20px;">Phim Bộ</b><br><br>
+            <ul>
+                <li><a href="#" title="Phim bộ Hàn Quốc">Phim bộ Hàn Quốc</a> </li>
+                <li><a href="#" title="Phim bộ Trung Quốc">Phim bộ Trung Quốc</a> </li>
+                <li><a href="#" title="Phim bộ Mỹ">Phim bộ Mỹ</a> </li>
+                <li><a href="#" title="Phim bộ Việt Nam">Phim bộ Việt Nam</a> </li>
+                <li><a href="#" title="Phim bộ Hồng Kông">Phim bộ Hồng Kông</a> </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

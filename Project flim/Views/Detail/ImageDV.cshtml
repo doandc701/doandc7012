@@ -1,0 +1,21 @@
+﻿@model List<Project_flim.Areas.Admin.Models.Framework.ListDV>
+
+
+    <div class="topdv">
+        <b>DIỄN VIÊN CHÍNH</b>
+    </div>
+    <div class="ctdv">
+        @foreach (var item in Model)
+        {
+        <div id="left">
+            <div id="img">
+                <img src="~/Assets/FileUpload/DienVien/@item.ImageDV" style="object-fit:cover">
+            </div>
+            <div id="name" style="width: 280px;">
+                <a href="/Detail/DienVien/@item.ID" style="text-decoration: none; display: block; text-align: center; color: cornsilk; font-weight: 600; font-size: 18px; ">@item.NameDV</a>
+            </div>
+        </div>
+        }
+    </div>
+
+

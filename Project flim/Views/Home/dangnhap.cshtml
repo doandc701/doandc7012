@@ -1,0 +1,102 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Đăng nhập</title>
+    <script src="~/Assets/Client/js/dangnhap.js></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    body {
+        height: 600px;
+        margin: 0px auto;
+    }
+
+    .than {
+        height: 900px;
+        background-image: url('/Assets/Client/img/bình luận/dangnhap.jpg');
+    }
+
+        .than .top {
+            /* padding: 12px 420px; */
+            box-sizing: border-box;
+            display: flex;
+            height: 70px;
+            justify-content: center;
+            padding-top: 30px;
+        }
+
+        .than .bottom {
+            width: 500px;
+            height: 160px;
+            margin-left: 30%;
+            padding: 0px 150px;
+        }
+
+            .than .bottom .left {
+                width: 200px;
+                height: 40px;
+                padding-top: 2px;
+                float: left;
+            }
+
+            .than .bottom .right {
+                width: 206px;
+                height: 40px;
+                padding-top: 2px;
+                padding-left: 40px;
+                margin-left: 10px;
+                float: left;
+            }
+
+    .food {
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        margin: 0 50px;
+        width: 200px;
+    }
+</style>
+<body>
+    <div class="than">
+        <div class="top">
+            <h1 style="color: white;font-size:30px;
+          font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                Đăng nhập
+            </h1>
+        </div></br>
+        <div class="bottom">
+            </br>
+            <label style="margin-left: 10px; font-size: 18px;color: white;" for="Tài khoản">Tài khoản</label><br>
+            <input style="margin-left: 10px;" type="text" name="Tài khoản" placeholder="Nhập tài khoản"></br></br>
+            <label style="margin-left: 10px; font-size: 18px;color: white;" for="Mật khẩu">Mật khẩu</label></br>
+            <input style="margin-left: 10px;" type="password" name="password" placeholder="Nhập mật khẩu"></br></br>
+            <input style="margin-left: 10px;" type="checkbox" name="Nhớ mật khẩu"><span style="color: white;">Nhớ mật khẩu</span></br></br>
+            <div class="left">
+                <tr>
+                    <td>
+                        <input onclick="send()" type="button" value="Đăng nhập">
+                    </td>
+                </tr>
+            </div>
+            <div class="right">
+                <a href="dangki.html">
+                    <button>Đăng ký</button>
+                </a>
+            </div>
+            <div class="food">
+                <button>Quên mật khẩu</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.lable{
+    margin: 10px;
+   color: blueviolet;
+}
+.chart-layout {
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+   
+}
+.chart-layout_item {
+    align-self: flex-end;
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent);
+    background-image: linear-gradient( #8B008B, #A80000);
+    animation: growth ease-in 3s;
+}
+@keyframes growth{
+    from{
+        opacity: 0;
+        height:calc(var(--percent)-50%);
+    }
+    to{
+        opacity: 1;
+        height: var(--percent);
+    }
+}

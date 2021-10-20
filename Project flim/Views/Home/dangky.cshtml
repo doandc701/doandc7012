@@ -1,0 +1,108 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>Đăng ký</title>
+</head>
+<script src="~/Assets/Client/js/javascript.js"></script>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        height: 720px;
+        margin: 0px auto;
+        font-size: 16px
+    }
+
+    .than {
+        padding-top: 80px;
+        height: 720px;
+        background-image: url('/Assets/Client/img/bình luận/b.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+        .than label {
+            color: white;
+        }
+
+        .than .top {
+            display: flex;
+            line-height: 50px;
+            height: 50px;
+            justify-content: center;
+            /* margin: 0px 250px;
+            padding-top: 10px; */
+            box-sizing: border-box;
+        }
+
+        .than .bottom {
+            width: 500px;
+            height: 210px;
+            margin: 0px auto;
+        }
+
+            .than .bottom .left {
+                width: 200px;
+                height: 200px;
+                float: left;
+                padding-top: 2px;
+                font-size: 18px;
+            }
+
+            .than .bottom .right {
+                width: 300px;
+                height: 200px;
+                float: left;
+            }
+
+                .than .bottom .right input {
+                    width: 200px;
+                    height: 24px;
+                }
+
+        .than .last {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+            .than .last input {
+                width: 250px;
+                height: 50px;
+            }
+
+                .than .last input:hover {
+                    cursor: pointer;
+                }
+</style>
+<body>
+    <div class="than">
+        <div class="top">
+            <b style="font-family: 'Times New Roman', Times, serif;font-size: 34px;
+                                 color: white;">Đăng ký</b>
+        </div></br>
+        <div class="bottom">
+            <div class="left">
+                <label for="Ten dang nhap">Tên đăng nhập: </label></br></br>
+                <label for="Email">Email: </label></br></br>
+                <label for="Số điện thoại">Số điện thoại:  </label></br></br>
+                <label for="Mật khẩu">Mật khẩu: </label></br></br>
+                <label for="Nhâp lại Mật khẩu">Nhâp lại mật khẩu: </label></br>
+            </div>
+            <div class="right">
+                <input type="text" placeholder="Nhập tài khoản"></br></br>
+                <input type="text" placeholder="Nhập email"></br></br>
+                <input type="text" placeholder="Nhập số điện thoại"></br></br>
+                <input type="password" placeholder="Nhập mật khẩu"></br></br>
+                <input type="password" placeholder="Nhập lại mật khẩu"></br>
+            </div>
+        </div>
+        <div class="last">
+            <input onclick="send()" type="button" value="Tạo tài khoản">
+        </div>
+    </div>
+</body>
+</html>

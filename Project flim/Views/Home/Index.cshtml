@@ -1,0 +1,65 @@
+﻿@model Project_flim.Areas.Admin.Models.Framework.ListDV
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="left" style="height: 1020px">
+    <div class="top" style="float: none;height: 310px">
+            @Html.Action("PhimDanhMuc", new { @CategoryID = 9 })
+    </div>
+    <div class="mid">
+            @Html.Action("PhimDanhMuc", new { @CategoryID = 17 })
+    </div>
+    <div class="bottom">
+        @Html.Action("PhimDanhMuc", new { @CategoryID = 2 })
+    </div>
+    </div>
+<div class="right" style="height: 1050px">
+    <b style="color: #f3ff50fd;font-size: 18px;">🌟 Trailer Phim Mới</b>
+    <div class="top">
+        <a href=""><img src="~/Assets/Client/img/pts/ấn quỷ2.jpg"></a>
+        <a href="#" title="Ấn Quỷ" style="text-decoration: none; font-size: 15px; padding-left: 5px;color: #11e2d1"><b>Ấn Quỷ</b></a></br>
+        <a href="#" title="The Unholy" style="text-decoration: none; font-size: 15px; padding-left: 5px;color: #ffffff"><span>The Unholy</span></a></br>
+        <a href="#" style="text-decoration: none; font-size: 15px; padding-left: 5px;color: #11e2d1"><span>Mức độ phổ biến : 357 điểm</span></a><br>
+        <a href="#" style="text-decoration: none; font-size: 10px; padding-left: 5px;">🧡🧡🧡🧡🤍🤍🤍</a>
+    </div>
+    </br>
+    <b style="color: #f3ff50fd;font-size: 18px;">🔑 Từ Khóa Nổi Bật </b>
+    <div class="mid">
+        <ul>
+            <li><a href="#" title="tội phạm">tội phạm</a></li>
+            <li><a href="#" title="tình yêu">tình yêu</a></li>
+            <li><a href="#" title="marvel">marvel</a></li>
+            <li><a href="#" title="phim ma">phim ma</a></li>
+            <li><a href="#" title="cảnh sát">cảnh sát</a></li>
+            <li><a href="#" title="ma cà rồng">ma cà rồng</a></li>
+            <li><a href="#" title="siêu anh hùng">siêu anh hùng</a></li>
+            <li><a href="#" title="sát thủ">sát thủ</a></li>
+            <li><a href="#" title="tận thế">tận thế</a></li>
+            <li><a href="#" title="xã hội đen">xã hội đen</a></li>
+            <li><a href="#" title="điệp viên">điệp viên</a></li>
+            <li><a href="#" title="tình yêu">tình yêu</a></li>
+            <li><a href="#" title="báo thù">báo thù</a></li>
+            <li><a href="#" title="gia đình">gia đình</a></li>
+            <li><a href="#" title="siêu nhân">siêu nhân</a></li>
+            <li><a href="#" title="châu tinh trì">châu tinh trì</a></li>
+            <li><a href="#" title="khủng bố">khủng bố</a></li>
+            <li><a href="#" title="trinh thám">trinh thám</a></li>
+        </ul>
+    </div>
+    <b style="color: #f3ff50fd;font-size: 18px;">📰 Hồ Sơ Diễn Viên</b>
+    <div class="bottom">
+        <div class="top" style="height: 220px">
+            <a href="/Detail/DienVien/34"><img src="~/Assets/FileUpload/DienVien/Khả Ngân-11 thang 5 ngay.jpg" style=" width: 200px; height: 200px;object-fit: cover;"></a>
+            <a href="/Detail/DienVien/34 " title="TONNY JAA" target="_blank" style="text-decoration: none; font-size: 12px; padding-left: 17px;color: #ffffff;">
+                <b style=" display: block; text-align: center; font-size: 14px; text-transform: uppercase;">khả ngân</b></a></br>
+        </div>
+        <div class="bottom">
+            <a href="/Detail/DienVien/31"><img src="~/Assets/FileUpload/DienVien/Lâm Canh Tân-trieu tu long.jpeg" style=" width: 200px; height: 200px; object-fit: cover;"></a>
+            <a href="/Detail/DienVien/31" title="JASON STATHAM" style="text-decoration: none; font-size: 12px; padding-left: 17px;color: #ffffff;">
+                <b style=" display: block; text-align: center; font-size: 14px; text-transform: uppercase;">LÂM CANH TÂN</b></a>
+        </div>
+    </div>
+</div>
+

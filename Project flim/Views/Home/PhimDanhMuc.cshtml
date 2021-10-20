@@ -1,0 +1,19 @@
+﻿@model List<Project_flim.Areas.Admin.Models.Framework.Phim>
+<div class="m">
+    <div class="l"><b style="font-size: 20px; color: #f3ff50fd;">@ViewBag.DanhMuc.Name</b></div>
+    <div class="r">
+        <a href="#" title="Xem thêm" style="text-decoration: none; padding-left: 10px;color: #dddddd;">Xem thêm ›</a>
+    </div>
+</div>
+<div class="h">
+    @foreach (var item in Model)
+    {
+        <div class="mot" style=" height: 100%;">
+            <a href="/Detail/Chitietphim/@item.ID"><img src="~/Assets/FileUpload/@item.Image" style="width: 170px; height: 220px; object-fit: cover;"></a>
+            <div><a href="/Detail/Chitietphim/@item.ID" title="Vùng đất" style="text-decoration: none; color: #11e2d1; font-size: 15px; padding-left: 5px;display:block;"><b>@item.Name</b></a> </div>
+            <div><a href="/Detail/Chitietphim/@item.ID" title="Land"style="text-decoration: none; font-size: 15px; padding-left: 5px;"><span>@item.Alias</span></a></div>
+            <div><span style="font-size: 15px;  padding-left: 5px">@item.Time</span></div>
+        </div>
+    }
+</div>
+

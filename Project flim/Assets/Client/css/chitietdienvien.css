@@ -1,0 +1,570 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    width: 1200px;
+    height: 1200px;
+    background-color: #555358;
+    margin: 0px auto;
+}
+html{
+    scroll-behavior:smooth;
+}
+.banner {
+    width: 1200px;
+    height: 154px;
+    background-color: #555358;
+    ;
+}
+
+    .banner .top {
+        width: 1200px;
+        height: 80px;
+        background-color: #3b3a3f;
+        border: 1px solid #3b3a3f;
+        border-radius: 5px;
+    }
+
+        .banner .top .left {
+            width: 500px;
+            height: 80px;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .banner .top .left h1 {
+                animation: my 200ms infinite;
+                @-webkit-keyframes
+                : my 700ms infinite;
+            }
+
+@-webkit-keyframes my {
+    0% {
+        color: #17cf11;
+    }
+
+    60% {
+        color: #fff;
+    }
+
+    100% {
+        color: #17cf11;
+    }
+}
+
+.banner .top .right {
+    width: 496px;
+    height: 80px;
+    /* float: left; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+    .banner .top .right input {
+        width: 300px;
+        height: 35px;
+        border-radius: 20px;
+        background: #555358;
+        border: none;
+        line-height: 35px;
+        color: beige;
+        padding-left: 20px;
+        outline: none;
+        position: relative;
+    }
+
+    .banner .top .right .search-item {
+        width: 30px;
+        height: 30px;
+        background: red;
+        color: white;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 0px 5px rgba(33, 34, 38);
+        cursor: pointer;
+    }
+
+.banner .bottom {
+    width: 1200px;
+    height: 70px;
+    background-color: #323031;
+    border: 1px solid #3b3a3f;
+    border-radius: 5px;
+}
+
+ul.root {
+    height: 70px;
+}
+
+    ul.root > li {
+        list-style: none;
+        float: left;
+        position: relative;
+    }
+
+        ul.root > li > a {
+            text-decoration: none;
+            display: block;
+            line-height: 40px;
+            padding: 0px 10px 0px 15px;
+            font-size: 20px;
+            color: white;
+            text-transform: unset;
+        }
+
+            ul.root > li > a:hover {
+                color: rgb(0, 255, 213);
+            }
+
+            ul.root > li > a:active,
+            ul.root > li > a:focus {
+                background-color: rgba(123, 240, 14, 0.473);
+                color: rgb(0, 255, 213);
+            }
+
+ul.submenu {
+    width: 280px;
+    background-color: #141414;
+    z-index: 1;
+    opacity: 0.9;
+    min-height: 150px;
+    display: none;
+    position: absolute;
+}
+
+    ul.submenu li {
+        list-style: none;
+        float: left;
+        width: 50%;
+    }
+
+        ul.submenu li a {
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            text-decoration: none;
+            display: block;
+            line-height: 40px;
+            white-space: nowrap;
+        }
+
+ul.root > li:hover ul.submenu {
+    display: block;
+}
+
+ul.submenu li a:hover {
+    color: rgb(0, 255, 213);
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    background-color: #1d1d1d;
+    margin: 0px auto;
+}
+
+.container .container1 {
+    width: 700px;
+    height: 490px;
+    margin: 0px 0px 0px 10px;
+}
+
+.container .container1 .poster {
+    width: 700px;
+    height: 330px;
+    float: left;
+}
+
+.container .container1 .historry {
+    width: 690px;
+    height: 145px;
+    margin: 6px;
+    float: left;
+    border: 1px solid rgb(61, 60, 60);
+    background-color: rgb(100, 98, 95);
+}
+
+.container .poster .left {
+    width: 300px;
+    height: 315px;
+    margin: 6px;
+    float: left;
+}
+
+.container .poster .right .name {
+    width: 380px;
+    height: 50px;
+    float: left;
+    margin: 3px;
+    color: yellow;
+    background-color: rgb(100, 98, 95);
+}
+
+.container .poster .right .name a {
+    font-size: 25px;
+}
+
+.container .poster .right .information {
+    width: 380px;
+    height: 200px;
+    float: left;
+    margin: 3px;
+    background-color: rgb(100, 98, 95);
+    color: rgb(238, 225, 225);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container .poster .right .information h5{
+    line-height: 15px;
+    text-align: center;
+}
+
+.container .poster .right .nomi {
+    width: 380px;
+    height: 50px;
+    float: left;
+    margin: 3px;
+    background-color: rgb(7, 100, 100);
+}
+
+.container .poster .right .nomi a {
+    text-decoration: none;
+    line-height: 50px;
+    color: white;
+    margin: 29px;
+}
+
+.container1 {
+    width: 1000px;
+    height: 1013px;
+    margin: 0px auto;
+}
+
+.container1 .title {
+    width: 1000px;
+    height: 50px;
+    background-color: #1d1d1d;
+}
+
+.container1 .title h1 {
+    line-height: 50px;
+    text-align: left;
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 12px;
+}
+
+.container1 .img .add1 {
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    float: left;
+    border: 1px solid black;
+}
+
+.container1 .img .add2 {
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    float: left;
+    border: 1px solid black;
+}
+
+.container1 .img .add3 {
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    float: left;
+    border: 1px solid black;
+}
+
+.container1 .img .add4 {
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    float: left;
+    border: 1px solid black;
+}
+
+.container1 .img .add5 {
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    float: left;
+    border: 1px solid black;
+}
+
+.container1 .img .add6 {
+    width: 300px;
+    height: 450px;
+    margin: 10px;
+    float: left;
+    border: 1px solid black;
+}
+
+.container1 .img .add1 .top {
+    width: 300px;
+    height: 350px;
+}
+
+.container1 .img .add1 .btn {
+    width: 300px;
+    height: 100px;
+    color: white;
+    background-color: rgb(56, 54, 54);
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container1 .img .add1 .btn a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container1 .img .add1 .btn a:hover{
+    color: yellow;
+}
+
+.container1 .img .add2 .top {
+    width: 300px;
+    height: 350px;
+}
+
+.container1 .img .add2 .btn {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(56, 54, 54);
+    color: white;
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container1 .img .add2 .btn a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container1 .img .add2 .btn a:hover{
+    color: yellow;
+}
+
+
+.container1 .img .add3 .top {
+    width: 300px;
+    height: 350px;
+}
+
+.container1 .img .add3 .btn {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(56, 54, 54);
+    color: white;
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container1 .img .add3 .btn a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container1 .img .add3 .btn a:hover{
+    color: yellow;
+}
+
+
+.container1 .img .add4 .top {
+    width: 300px;
+    height: 350px;
+}
+
+.container1 .img .add4 .btn {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(56, 54, 54);
+    color: white;
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container1 .img .add4 .btn a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container1 .img .add4 .btn a:hover{
+    color: yellow;
+}
+
+
+.container1 .img .add5 .top {
+    width: 300px;
+    height: 350px;
+}
+
+.container1 .img .add5 .btn a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container1 .img .add5 .btn a:hover{
+    color: yellow;
+}
+
+
+.container1 .img .add5 .btn {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(56, 54, 54);
+    color: white;
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container1 .img .add6 .top {
+    width: 300px;
+    height: 350px;
+}
+
+.container1 .img .add6 .btn {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(56, 54, 54);
+    color: white;
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.container1 .img .add6 .btn a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container1 .img .add6 .btn a:hover{
+    color: yellow;
+}
+
+.ket {
+    width: 1200px;
+    height: 150px;
+    background-color: #222222;
+    margin: 0px auto;
+    border: 1px solid  #3b3a3f;
+    border-radius: 5px;
+}
+
+.ket .mt
+    {
+        width: 300px;
+        height: 150px;
+        color: white;
+        float: left;
+    }
+    .ket .mt b{
+        animation: my 200ms infinite;
+        @-webkit-keyframes: my 700ms infinite;
+        
+    }
+    @-webkit-keyframes my {
+        0% { color: #17cf11; } 
+        60% { color: #fff;  } 
+        100% { color: #17cf11;  } 
+    }
+.ket .hi
+    {
+        width: 230px;
+        height: 150px;
+        color: white;
+        float: left;
+    }
+.ket .hi ul 
+    {
+         margin: 0px;
+         padding: 0px;    
+    }
+.ket .hi ul li
+    {
+        list-style: none;
+    }
+.ket .hi ul li a
+    {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+.ket .hi ul li a:hover
+    {
+        color: rgb(120, 192, 3);
+    }
+.ket .ba
+    {
+        width: 230px;
+        height: 150px;
+        color: white;
+        float: left;
+    }
+.ket .ba ul 
+    {
+        margin: 0px;
+        padding: 0px;
+            
+    }
+.ket .ba ul li
+    {
+        list-style: none;
+    }
+.ket .ba ul li a
+    {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+.ket .ba ul li a:hover
+    {
+        color: rgb(120, 192, 3);
+    }
+.ket .bn
+    {
+        width: 225px;
+        height: 150px;
+        color: white;
+        float: left;
+    }
+.ket .bn ul 
+    {
+        margin: 0px;
+        padding: 0px;   
+    }
+.ket .bn ul li
+    {
+        list-style: none;
+    }
+.ket .bn ul li a
+    {
+        text-decoration: none;
+        color: white;
+         font-size: 17px;
+         font-family: 'Times New Roman', Times, serif;
+    }
+.ket .bn ul li a:hover
+    {
+        color: rgb(120, 192, 3);
+    }

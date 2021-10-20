@@ -1,0 +1,59 @@
+﻿@model Project_flim.Areas.Admin.Models.Framework.Account
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/Assets/Client/dangky/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        function send(){
+            let arr = document.getElementsByTagName('input');
+            let tendangnhap = arr[0].value;
+            let email =arr[1].value;
+            let matkhau =arr[2].value;
+            let nhaplaimatkhau =arr[3].value;
+            if(tendangnhap == "" || email == "" || matkhau =="" || nhaplaimatkhau == "")
+            {
+                alert("Vui lòng điền đầy đủ thông tin");
+                return;
+            }
+            if(matkhau != nhaplaimatkhau)
+            {
+                alert("Mật khẩu không khớp! vui lòng nhập lại");
+                return;
+            }
+            confirm('Tên đăng nhập : ' +tendangnhap+"\n"+
+            'Email: '+email + "\n" +
+            'Mật khẩu '+ matkhau +"\n")
+        }
+    </script>
+<body>
+    <div class="main">
+        <div class="resiger">
+            <h1 class="lable">Đăng Ký</h1>
+            <form action="">
+                <lable class="lb">Tên đăng nhập: </lable>
+                <input type="text" class="dn" placeholder="Tên đăng nhập">
+                <lable class="lb">Email:</lable>
+                <input type="email" class="dn" placeholder="Email">
+                <lable class="lb">Mật khẩu: </lable>
+                <input type="password" class="dn" placeholder="Mật khẩu">
+                <lable class="lb">Nhập lại mật khẩu: </lable>
+                <input type="password" class="dn" placeholder="Nhập lại mật khẩu">
+
+            </form>
+            <div class="dk">
+                <input type="submit" value="Đăng ký " class="btn" onclick="send()">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

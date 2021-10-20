@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="726f6950f0314c548c32051b092151c8" Name="Diagram1">
+        <EntityTypeShape EntityType="PhimModel.Account" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhimModel.DanhMuc" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhimModel.Phim" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhimModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="PhimModel.FK_DanhMuc_Phim" ManuallyRouted="false" />
+        <AssociationConnector Association="PhimModel.FK_Phim_Phim" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PhimModel.ListDV" Width="1.5" PointX="6" PointY="1.125" />
+        <AssociationConnector Association="PhimModel.FK_ListDV_Phim" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,271 @@
+﻿@model Project_flim.Areas.Admin.Models.Framework.Phim
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <title>Xem phim @ViewBag.id</title>
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    <link rel="stylesheet" href="~/Assets/Client/css/xemphim.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <div class="top">
+            <div class="left">
+                <a href="#" title="DTphim.org" style="text-decoration: none;"><h1>🎬DTphim.org</h1></a>
+            </div>
+            <div class="right">
+                <div class="input-box">
+                    <input type="text" title="Tìm kiếm" autocomplete="off" placeholder="Nhập tên phim, diễn viên ...">
+                </div>
+                <div class="search-item">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul class="root">
+                <li><a href="/Home/Index" title="Trang chủ" class="active">Trang chủ</a></li>
+                <li>
+                    <a href="#" title="Thể loại">Thể loại</a>
+                    <ul class="submenu">
+                        <li><a href="">Phim Hành Động</a></li>
+                        <li><a href="">Phim Tình Cảm</a></li>
+                        <li><a href="">Phim Viễn Tưởng</a></li>
+                        <li><a href="">Phim Hài Hước</a></li>
+                        <li><a href="">Phim Cổ Trang</a></li>
+                        <li><a href="">Phim Anime</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Quốc gia">Quốc gia</a>
+                    <ul class="submenu">
+                        <li><a href="">Việt Nam</a></li>
+                        <li><a href="">Mỹ</a></li>
+                        <li><a href="">Anh</a></li>
+                        <li><a href="">Trung Quốc</a></li>
+                        <li><a href="">Hàn Quốc</a></li>
+                        <li><a href="">Ấn Độ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Phim lẻ">Phim lẻ</a>
+                    <ul class="submenu">
+                        <li><a href="">Năm 2019</a></li>
+                        <li><a href="">Năm 2020</a></li>
+                        <li><a href="">Năm 2021</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" title="Phim bộ">Phim bộ</a>
+                    <ul class="submenu">
+                        <li><a href="">Năm 2019</a></li>
+                        <li><a href="">Năm 2020</a></li>
+                        <li><a href="">Năm 2021</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="Trailer">Trailer</a></li>
+                <li><a href="" title="BXH">Top 50</a></li>
+                <li>
+                    <a href="#" title="Phim chiếu rạp">Phim chiếu rạp</a>
+                    <ul class="submenu">
+                        <li><a href="">Năm 2019</a></li>
+                        <li><a href="">Năm 2020</a></li>
+                        <li><a href="">Năm 2021</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Home/dangnhap" target="_self" title="Đăng nhập">Đăng nhập</a></li>
+                <li><a href="/Home/dangky" target="_self" title="Đăng ký">Đăng ký</a></li>
+                <li><a href="#" title="Về chúng tôi">Về chúng tôi</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dau">
+        <ul>
+            <li><a href="#" title="Trang chủ">@Html.DisplayFor(x => x.ChiMuc)<span style="color:silver;">@Html.DisplayFor(x => x.Name)</span></a></li>
+
+        </ul>
+    </div>
+    <div class="main">
+        <div class="tpp">
+            <div class="left">
+                <img src="~/Assets/FileUpload/@Html.DisplayFor(x => x.Image)" style="width: 170px; height: 220px; object-fit: cover;">
+                <a href="#" title="Trailer" style="text-decoration: none;"><b style="font-size: 18px; color: aquamarine;padding-left: 40px; ">Xem Trailer</b></a>
+            </div>
+            <div class="right">
+                <b style="font-size: 20px; color: yellow;padding-left: 8px;">Xem Phim @Html.DisplayFor(x => x.Name)</b></br>
+                <span style="color:white; font-size: 12px;padding-left: 20px;">Xem phim @Html.DisplayFor(x => x.Alias)</span></br>
+                <p style="color: white; padding-left:8px ;">
+                    @Html.DisplayFor(x => x.Detail)
+                </p>
+            </div>
+        </div></br>
+        <div class="middle">
+            <div class="top">
+                <iframe width="1000" height="400" src="@Html.DisplayFor(x => x.Video)" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </br></br> <ul>
+                    <li><a href="#" title="Tắt đèn">💡Tắt đèn</a></li>
+                    <li><a href="#" title="Thêm vào tủ phim">🧡Thêm vào tủ phim</a></li>
+                    <li><a href="#" title="Tự chuyện tập: Bật">⏩Tự chuyện tập: Bật</a></li>
+                    <li><a href="#" title="Download">🔽Download</a></li>
+                    <li><a href="#" title="Phóng to">🔎Phóng to</a></li>
+                </ul>
+            </div></br>
+            <div class="last">
+                <b style="font-size: 20px; color: yellow; padding-left: 35px;">Đánh giá phim</b></br>
+                <div class="stars">
+                    <form action="">
+                        <input class="star star-5" id="star-5" type="radio" name="star" />
+                        <label class="star star-5" for="star-5"></label>
+                        <input class="star star-4" id="star-4" type="radio" name="star" />
+                        <label class="star star-4" for="star-4"></label>
+                        <input class="star star-3" id="star-3" type="radio" name="star" />
+                        <label class="star star-3" for="star-3"></label>
+                        <input class="star star-2" id="star-2" type="radio" name="star" />
+                        <label class="star star-2" for="star-2"></label>
+                        <input class="star star-1" id="star-1" type="radio" name="star" />
+                        <label class="star star-1" for="star-1"></label>
+                    </form>
+                </div></br>
+                <span style=" padding-left: 15px;color: white;padding-left: 35px;">8/10 (từ 2001 votes)</span>
+            </div>
+        </div>
+        <div class="last">
+            <b style="font-size: 20px; padding-left: 5px; color: #ffffff;">Bình luận về phim</b></br>
+            <div class="d">
+                <div class="hienthi">
+                    <div class="left">
+                        <b>200 bình luận</b>
+                    </div>
+                    <div class="right">
+                        <b style="padding-left: 20px;">Sắp xếp theo:</b>
+                        <select>
+                            <option>Phù hợp nhất</option>
+                            <option>Mới nhất</option>
+                            <option>Cũ nhất</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mot">
+                    <div class="left">
+                        <img src="~/Assets/Client/img/bình luận/91642166_2333867580245137_5946480309775106048_o.jpg">
+                    </div>
+                    <div class="right"><input style="height: 85px; width: 918px; margin-left: 5px;" type="text" name="Thêm bình luận"></div>
+                </div></br>
+                <div class="hai">
+                    <div class="left">
+                        <img src="~/Assets/Client/img/bình luận/61559199_2300539366850835_3271703299211919360_n.jpg">
+                    </div>
+                    <div class="right">
+                        <a href="#" title="Chử Tiến" style="text-decoration: none;"><b style=" font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 13px;">Chủ Tiến</b></a></br>
+                        <span>Em xem phần này em thực sự nể phục luôn ❤️. Đây là Bộ phim điện ảnh Việt Nam rất tuyệt vời .Cảm ơn anh Xìn và cả Ekip 👏❤️</span>
+                        <ul>
+                            <li><a href="#" title="Thích" style="text-decoration: none;">Thích</a></li>
+                            <li><a href="#" title="Phản hồi" style="text-decoration: none;">Phản hồi</a></li>
+                            <li><a href="#" title="12 giờ" style="text-decoration: none;">12 giờ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ba">
+                    <div class="left">
+                        <img src="~/Assets/Client/img/bình luận/141038733_972567159817377_5445957716976158789_o.jpg">
+                    </div>
+                    <div class="right">
+                        <a href="#" title="Lê Bống" style="text-decoration: none;"><b style=" font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 13px;">Lê Bống</b></a></br>
+                        <span>Rất thích đoạn thoại oneshot này. Vậy mới thấy được sự chỉnh chu và tâm huyết của nhân vật dành cho bộ phim lớn như nào!</span>
+                        <ul>
+                            <li><a href="#" title="Thích" style="text-decoration: none;">Thích</a></li>
+                            <li><a href="#" title="Phản hồi" style="text-decoration: none;">Phản hồi</a></li>
+                            <li><a href="#" title="1 giờ" style="text-decoration: none;">1 giờ</a></li>
+                        </ul>
+                    </div>
+                </div></br>
+                <div class="bon">
+                    <div class="left">
+                        <img src="~/Assets/Client/img/bình luận/135582569_2948034418760243_1528425928214781731_o.jpg">
+                    </div>
+                    <div class="right">
+                        <a href="#" title="Đặng Tiến Hoàng" style="text-decoration: none;"><b style=" font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 13px;">Đặng Tiến Hoàng</b></a></br>
+                        <span>Đoạn Này Và đoạn Quắn livestream là mình thích nhất. Tâm đắt nhất câu "Lần cuối cùng mà bạn chụp hình với ba bạn là bao lâu" khóc quá  trời</span>
+                        <ul>
+                            <li><a style="text-decoration: none;" href="#" title="Thích">Thích</a></li>
+                            <li><a href="#" title="Phản hồi" style="text-decoration: none;">Phản hồi</a></li>
+                            <li><a href="#" title="20 giờ" style="text-decoration: none;">20 giờ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nam">
+                    <a href="#" title="Xem thêm" style="text-decoration: none;"><b style=" line-height: 50px; padding-left: 400px; color: white;">Xem thêm 197 bình luận </b></a>
+                </div>
+            </div>
+        </div></br>
+        <b style="font-size: 20px; color: #ffffff;">Có thể bạn muốn xem</b>
+        <div class="cot">
+            <div class="mot">
+                <img src="~/Assets/Client/img/bình luận/godzila king kong.jpg">
+                <a href="#" title="Godzila vs KingKong" style="text-decoration: none; font-size: 15px; padding-left: 35px; color: #11e2d1;"> <b>Godzila vs KingKong</b></a></br>
+                <a href="#" title="Godzila vs KingKong" style="text-decoration: none; font-size: 13px; padding-left: 45px; color: #11e2d1"><span>Godzila vs KingKong</span></a> </br>
+                <span style="font-size: 15px;  padding-left: 75px">150 phút</span>
+            </div>
+            <div class="hai">
+                <img src="~/Assets/Client/img/bình luận/lmc;.jpg">
+                <a href="#" title="LIÊN MINH CÔNG LÝ: PHIÊN BẢN CỦA ZACK SNYDER " style="text-decoration: none; font-size: 15px; padding-left: 50px; color: #11e2d1;"> <b>Liên Minh Công Lý</b></a></br>
+                <a href="#" title=" Alliance justice" style="text-decoration: none; font-size: 13px; padding-left: 20px; color: #11e2d1"><span>Zack Snyder's Justice League (2021)</span></a> </br>
+                <span style="font-size: 15px;  padding-left: 75px">242 phút</span>
+            </div>
+            <div class="ba">
+                <img src="~/Assets/Client/img/bình luận/kingkong.jpg">
+                <a href="#" title="Kong: Đảo đầu lâu" style="text-decoration: none; font-size: 15px; padding-left: 50px; color: #11e2d1;"> <b>Kong: Đảo Đầu Lâu</b></a></br>
+                <a href="#" title="Kong skill Islands" style="text-decoration: none; font-size: 13px; padding-left: 50px; color: #11e2d1"><span>Kong: Skull Island (2017)</span></a> </br>
+                <span style="font-size: 15px;  padding-left: 75px">118 phút</span>
+            </div>
+            <div class="bon">
+                <img src="~/Assets/Client/img/bình luận/phù thùy học đường.jpg">
+                <a href="#" title="PHÙ THỦY HỌC ĐƯỜNG" style="text-decoration: none; font-size: 15px; padding-left: 50px; color: #11e2d1;"> <b>Phù Thủy Học Đường</b></a></br>
+                <a href="#" title="Godzila vs KingKong" style="text-decoration: none; font-size: 13px; padding-left: 50px; color: #11e2d1"><span>The Craft: Legacy (2020)</span></a> </br>
+                <span style="font-size: 15px;  padding-left: 75px">150 phút</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="ket">
+        <div class="mt">
+            <b style="height: 130px;font-family: 'Times New Roman', Times, serif; font-size: 30px; padding-left:60px;">🎬DTphim.org</b><br>
+            <span style="padding-left:30px">Xem phim nhanh online chất lượng cao </span>
+
+        </div>
+        <div class="hi">
+            <b style="font-size: 20px;">Trang chủ </b></br></br>
+            <ul>
+                <li><a href="#" title="Phim lẻ mới">Phim lẻ mới</a> </li>
+                <li><a href="#" title="Phim bộ mới">Phim bộ mới</a> </li>
+                <li><a href="#" title="Phim chiếu rạp">Phim chiếu rạp</a> </li>
+                <li><a href="#" title="Phim kinh điển">Phim kinh điển</a> </li>
+                <li><a href="#" title="Phim sắp chiếu">Phim sắp chiếu</a> </li>
+            </ul>
+        </div>
+        <div class="ba">
+            <b style="font-size: 20px;">Phim Lẻ</b></br></br>
+            <ul>
+                <li><a href="#" title="Phim hành động">Phim hành động</a> </li>
+                <li><a href="#" title="Phim kiếm hiệp">Phim kiếm hiệp</a> </li>
+                <li><a href="#" title="Phim kinh dị">Phim kinh dị</a> </li>
+                <li><a href="#" title="Phim viễn tưởng">Phim viễn tưởng</a> </li>
+                <li><a href="#" title="Phim hoạt hình">Phim hoạt hình</a> </li>
+            </ul>
+        </div>
+        <div class="bn">
+            <b style="font-size: 20px;">Phim Bộ</b></br></br>
+            <ul>
+                <li><a href="#" title="Phim bộ Hàn Quốc">Phim bộ Hàn Quốc</a> </li>
+                <li><a href="#" title="Phim bộ Trung Quốc">Phim bộ Trung Quốc</a> </li>
+                <li><a href="#" title="Phim bộ Mỹ">Phim bộ Mỹ</a> </li>
+                <li><a href="#" title="Phim bộ Việt Nam">Phim bộ Việt Nam</a> </li>
+                <li><a href="#" title="Phim bộ Hồng Kông">Phim bộ Hồng Kông</a> </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

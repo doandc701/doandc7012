@@ -1,0 +1,99 @@
+﻿@model Project_flim.Areas.Admin.Models.Framework.Phim
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Thông Tin Phim</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChiMuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChiMuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Video)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Video)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DanhMuc.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanhMuc.Name)
+        </dd>
+
+    </dl>
+</div>
+    <div class="col-md-offset-2 col-md-10" style=" width: 25%; float: left;">
+        <a href="/Admin/Phims/Edit/@Html.DisplayFor(x => x.ID)"
+           style=" background: indigo; width: 88px; height: 43px; text-decoration: none; border-radius: 10px;
+                    margin-top: 3px; display: flex;align-items: center; justify-content: center;
+                    color: aquamarine;">Edit</a>
+    </div>
+
+
+    <div>
+        <a href="/Admin/Phims/Index" style=" display: block; background: khaki; width: 88px;
+                 height: 43px; text-decoration: none; border-radius: 10px; line-height: 43px;
+                 padding-left: 3px;float: left;margin-top: 3px;">Back To List</a>
+    </div>

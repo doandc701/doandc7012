@@ -1,0 +1,76 @@
+﻿@model Project_flim.Areas.Admin.Models.Framework.DanhMuc
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Thông Tin Danh Mục</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DanhMuc2.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanhMuc2.Name)
+        </dd>
+
+    </dl>
+</div>
+    
+    <div class="col-md-offset-2 col-md-10" style=" width: 25%; float: left;">
+        <a href="/Admin/DanhMucs/Edit/@Html.DisplayFor(x => x.ID)"
+            style=" background: indigo; width: 88px; height: 43px; text-decoration: none; border-radius: 10px; 
+            margin-top: 3px; display: flex;align-items: center; justify-content: center;
+            color: aquamarine;">Edit</a>
+    </div>
+ 
+    
+    <div>
+        <a href="/Admin/DanhMucs/Index" style=" display: block; background: khaki; width: 88px;
+         height: 43px; text-decoration: none; border-radius: 10px; line-height: 43px;
+         padding-left: 3px;float: left;margin-top: 3px;">Back To List</a>
+    </div>

@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Project_flim.Areas.Admin.Models.Framework.ListDV>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p class="create" style="width: 150px; height: 40px;
+    background: greenyellow;
+    border: none;
+    border-radius: 24px;">
+
+    <a href="/Admin/ListDVs/Create" style="line-height: 40px;
+     text-decoration:none;
+     color: currentColor;
+     text-align: center;
+     margin-left: 31px;">Create New</a>
+
+</p>
+
+@using (Html.BeginForm("Index", "ListDVs", FormMethod.Get))
+{
+    <b style="margin-bottom: 10px; display: block;  ">
+        Tìm kiếm diễn viên : @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Tìm kiếm" />
+    </b>
+}
+<table class="table">
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameDV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImageDV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_of_birth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Job)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.View)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Related_movies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Story)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NamePhim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phim.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameDV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageDV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_of_birth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Job)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.View)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Related_movies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Story)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NamePhim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phim.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,115 @@
+﻿@model Project_flim.Areas.Admin.Models.Framework.ListDV
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h3>Bạn có muốn xóa diễn viên này?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameDV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameDV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageDV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageDV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_of_birth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_of_birth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Job)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Job)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.View)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.View)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Related_movies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Related_movies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Story)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Story)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NamePhim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamePhim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phim.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phim.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" style=" width: 25%; float: left;">
+                <input type="submit" value="Delete" class="btn btn-default"
+                  style=" width: 70px; margin: 5px; background: black; color: aliceblue;" />
+            </div>
+        </div>
+
+
+        <div>
+            <a href="/Admin/ListDVs/Index" style=" display: block; background: khaki; width: 88px;
+         height: 43px; text-decoration: none; border-radius: 10px; line-height: 43px;
+         padding-left: 3px;float: left;margin-top: 3px;">Back To List</a>
+        </div>
+    }
+</div>

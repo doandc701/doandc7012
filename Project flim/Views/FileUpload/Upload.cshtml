@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload</title>
+</head>
+<body>
+    <div>
+        <div>
+            <label>File Name: </label>
+            <label>@ViewBag.FileName </label>
+        </div>
+        <div>
+
+            <label>File type: </label>
+            <label>@ViewBag.FileType </label>
+        </div>
+        <div>
+            <label>File size: </label>
+            <label>@ViewBag.FileSize </label>
+        </div>
+        <div>
+            <label>Image: </label>
+            <img src="~/Assets/FileUpload/@ViewBag.FileName" />
+        </div>
+    </div>
+</body>
+</html>
